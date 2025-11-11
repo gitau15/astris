@@ -1,14 +1,11 @@
-from fastapi import FastAPI # pyright: ignore[reportMissingImports]
+from fastapi import FastAPI
 
-# Create the FastAPI app instance
 app = FastAPI()
 
-# Define a root endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to Astris. The council is assembling."}
+    return {"message": "Astris is online."}
 
-# Define the chat endpoint
 @app.post("/chat")
 def chat_endpoint():
-    return {"response": "The Lead Councillor of Astris is ready."}
+    return {"response": "Councillor is ready."}
